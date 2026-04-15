@@ -1,40 +1,47 @@
 # Jing's Cursor Rules
 
-個人開發時常用的 [Cursor](https://www.cursor.com/) Rules 集合，涵蓋提交規範、程式碼風格、專案結構等，讓 AI 協作更一致、更高效。
+個人開發時常用的 [Cursor](https://www.cursor.com/) Rules 集合，依技術類別分資料夾管理，讓 AI 協作更一致、更高效。
 
 ## 使用方式
 
 將需要的 `.mdc` 檔案複製到你專案的 `.cursor/rules/` 目錄下：
 
 ```bash
-cp rules/commit-rules.mdc your-project/.cursor/rules/
+cp commit/commit-rules.mdc your-project/.cursor/rules/
+cp nextjs/nextjs.mdc your-project/.cursor/rules/
 ```
 
-或直接在 Cursor 的 Rules 設定中引用。
+## 目錄結構
+
+```
+jing-cursor-rules/
+├── commit/          # Git 提交規範
+└── nextjs/          # Next.js 相關規則
+```
 
 ## 規則列表
 
-| 檔案 | 說明 | 適用場景 |
-|------|------|----------|
-| [commit-rules.mdc](./rules/commit-rules.mdc) | Conventional Commits + Gitmoji 提交規範 | 所有專案 |
+### `commit/`
 
-## 規則說明
+| 檔案 | 說明 |
+|------|------|
+| [commit-rules.mdc](./commit/commit-rules.mdc) | Conventional Commits + Gitmoji 提交規範，含 emoji 類型對照表與 AI 指導語 |
 
-### `commit-rules.mdc`
+### `nextjs/`
 
-強制執行 Conventional Commits 格式搭配 Gitmoji，讓 commit 訊息清晰易讀。
-
-格式：
-```
-<emoji> <type>(<scope>): <subject>
-```
-
-範例：
-```
-✨ feat(ui): add dark mode toggle
-🐛 fix(api): handle null response from gemini
-📝 docs(config): update deployment guide
-```
+| 檔案 | 說明 |
+|------|------|
+| [nextjs.mdc](./nextjs/nextjs.mdc) | TypeScript + Next.js App Router + Shadcn UI + Tailwind 通用最佳實踐 |
+| [nextjs-react-generalist-cursor-rules.mdc](./nextjs/nextjs-react-generalist-cursor-rules.mdc) | 全端通才規則，涵蓋 JS/TS/CSS/React/Next.js |
+| [nextjs-react-typescript-cursor-rules.mdc](./nextjs/nextjs-react-typescript-cursor-rules.mdc) | React + TypeScript + Next.js App Router 嚴謹規範 |
+| [nextjs-react-redux-typescript-cursor-rules.mdc](./nextjs/nextjs-react-redux-typescript-cursor-rules.mdc) | React + Redux + TypeScript + Next.js 完整開發規範 |
+| [nextjs-react-vite-javascript-cursor-rules.mdc](./nextjs/nextjs-react-vite-javascript-cursor-rules.mdc) | React + Vite + JavaScript + Zustand + Shadcn UI |
+| [nextjs-typescript-tailwindcss-supabase-cursor-rules.mdc](./nextjs/nextjs-typescript-tailwindcss-supabase-cursor-rules.mdc) | Next.js + TypeScript + Tailwind + Supabase 全端規範 |
+| [nextjs-vite-solidity-typescript-cursor-rules.mdc](./nextjs/nextjs-vite-solidity-typescript-cursor-rules.mdc) | Next.js + Solidity + Wagmi + Viem Web3 開發規範 |
+| [optimized-nextjs-typescript-best-practices-modern-ui-ux.mdc](./nextjs/optimized-nextjs-typescript-best-practices-modern-ui-ux.mdc) | 最佳化 Next.js + TypeScript，強調 Clean Code 與現代 UI/UX |
+| [payload-cms-nextjs-typescript-best-practices.mdc](./nextjs/payload-cms-nextjs-typescript-best-practices.mdc) | Payload CMS + Next.js + TypeScript + MongoDB 全端規範 |
+| [blog-glass-design-system.mdc](./nextjs/blog-glass-design-system.mdc) | Glassmorphism 設計系統規格書，定義配色 Token 與卡片變體 |
+| [nextjs-tailwind-glassmorphism.mdc](./nextjs/nextjs-tailwind-glassmorphism.mdc) | Next.js + Tailwind Glassmorphism 視覺風格規則 |
 
 ## 貢獻
 
