@@ -1,5 +1,7 @@
 # Jing's Cursor Rules
 
+[中文版](./README.zh-TW.md) | English
+
 A personal collection of [Cursor](https://www.cursor.com/) Rules organized by technology category, making AI collaboration more consistent and efficient.
 
 ## Usage
